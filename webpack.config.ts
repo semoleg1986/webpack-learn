@@ -24,7 +24,7 @@ export default (env: EnvVariables) =>{
       },
       plugins: [
           new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html')}),
-          new webpack.ProgressPlugin()
+          isDev && new webpack.ProgressPlugin()
       ],
       module: {
         rules: [
@@ -42,8 +42,8 @@ export default (env: EnvVariables) =>{
       resolve: {
         extensions: ['.tsx', '.ts', '.js'],
       },
-      devtool: isDev ? 'inline-source-map' : false,
-      devServer: {
+      devtool: isDev && 'inline-source-map',
+      devServer: isDev && {
         port: env.port ?? 4000,
         open: true
       }
