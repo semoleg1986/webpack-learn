@@ -7,8 +7,8 @@
     // Запрет неявного any типа
     "noImplicitAny": true,
     
-    // Формат модулей (в данном случае ECMAScript 6)
-    "module": "es6",
+    // Формат модулей (в данном случае ESNext)
+    "module": "ESNext",
     
     // Версия языка ECMAScript, к которой будет транспилироваться TypeScript
     "target": "es5",
@@ -16,10 +16,24 @@
     // Формат JSX (в данном случае React)
     "jsx": "react",
     
-    // Разрешение использования файлов JavaScript в проекте
+    // Разрешение использования файлJavaScript в проекте
     "allowJs": true,
     
     // Метод разрешения модулей (в данном случае Node.js)
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+
+    // Разрешение синтетического использования импортов по умолчанию
+    "allowSyntheticDefaultImports": true,
+
+    // Включение совместимости с CommonJS модулями (для работы с ESM и CommonJS)
+    "esModuleInterop": true
+  },
+  "ts-node": {
+    // Компиляторные опции для ts-node
+    "compilerOptions": {
+      // Формат модулей, который будет использоваться при компиляции
+      // В данном случае, используется CommonJS (популярный формат модулей для Node.js)
+      "module": "commonjs"
+    }
   }
 }
