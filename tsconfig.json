@@ -1,0 +1,25 @@
+{
+  // Компиляторные настройки TypeScript
+  "compilerOptions": {
+    // Директория для выходных файлов после компиляции
+    "outDir": "./dist/",
+    
+    // Запрет неявного any типа
+    "noImplicitAny": true,
+    
+    // Формат модулей (в данном случае ECMAScript 6)
+    "module": "es6",
+    
+    // Версия языка ECMAScript, к которой будет транспилироваться TypeScript
+    "target": "es5",
+    
+    // Формат JSX (в данном случае React)
+    "jsx": "react",
+    
+    // Разрешение использования файлов JavaScript в проекте
+    "allowJs": true,
+    
+    // Метод разрешения модулей (в данном случае Node.js)
+    "moduleResolution": "node"
+  }
+}
